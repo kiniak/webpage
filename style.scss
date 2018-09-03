@@ -1,0 +1,776 @@
+html {
+  font-size: 62.5%;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  min-width: 320px;
+}
+
+@keyframes animateUp {
+  0% {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+100% {
+  opacity: 1;
+  transform: none;
+}
+}
+.containerFullScreen{
+  width: 100%;
+}
+@keyframes stretch{
+  0% {
+  transform: scale(.3);
+  background-color: red;
+  border-radius: 100%;
+}
+50% {
+  background-color: orange;
+}
+100% {
+  transform: scale(1.5);
+  background-color: yellow;
+}
+}
+
+
+$translucentred: #f13e65;
+@mixin buttonContact{
+  font-size: 1.2rem;
+  color: black;
+  background-color: white;
+  margin-top: 2rem;
+  padding: 0.9rem 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.5s ease 0s;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  align-self: center;
+}
+@mixin buttonContactHover{
+  color: white;
+   background-color: $translucentred;
+   border: 2px solid $translucentred;
+}
+
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.start{
+  background: url(jpg/women.jpg) no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+  min-height: 100vh;
+}
+.start::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .85;
+  z-index: -1;
+
+}
+.menuHamburger{
+  display: none;
+}
+.start{
+  header {
+    padding: 8rem 0 0 0;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 10px #222;
+    transition: all 1s ease 0s;
+    #nav a:hover {
+  	background-color: rgba(241, 62, 101, .2);
+    border-bottom: 2px solid rgba(241, 62, 101, .1);
+}
+
+#nav .current a {
+  border-bottom: 2px solid $translucentred;
+}
+
+    img{
+      position: absolute;
+      max-width: 170px;
+      bottom: 1.3rem;
+      left: 7rem;
+      margin-left: 3rem;
+      transition: all 0.5s ease 0s;
+      display: inline-block;
+    }
+    ul{
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1rem;
+      margin-right: 4rem;
+      li{
+        margin: 0 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        a{
+          text-decoration: none;
+          color: black;
+          font-weight: 500;
+          font-size: 1.4rem;
+          transition: all 0.5s ease 0s;
+        }
+      }
+      li:last-child{
+        margin-right: 2rem;
+      }
+      }
+      }
+      .job{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      margin:-1rem 0 0 0rem;
+        min-height: 100vh;
+        h1{
+          font-size: 6.5rem;
+          font-weight: 700;
+          color: $translucentred;
+          width: 100%;
+          margin-bottom: 1rem;
+          align-self: center;
+        }
+        h2{
+          color: white;
+          font-size: 1.9rem;
+          width: 100%;
+          align-self: center;
+        }
+        .contactMe{
+           @include buttonContact;
+           }
+           .contactMe:hover{
+          @include buttonContactHover;
+           }
+      }
+      .ButtonDown{
+        text-align: center;
+        margin-top: -14rem;
+      }
+      .scrollDownButton{
+        display: inline-block;
+        i.fa.fa-angle-double-down{
+        font-size: 30px;
+        color: white;
+        animation: angle 2s infinite linear;
+        margin: 0 auto;
+
+    }
+      }
+
+  @keyframes angle {
+    0%{transform:translateY(5px);}
+    20%{transform:translateY(8px);}
+    40%{transform:translateY(11px);}
+    60%{transform:translateY(14px);}
+    80%{transform:translateY(17px);}
+    100%{transform:translateY(24px);}
+
+  }
+  }
+
+.start header.headerScroll{
+      padding-top: 3rem;
+      transition: all 0.5s ease 0s;
+      img{
+        width: 170px;
+        transition: all 0.5s ease 0s;
+      }
+      ul{
+          transition: all 0.5s ease 0s;
+      }
+      a{
+        font-size: 1.2rem;
+        transition: all 0.5s ease 0s;
+      }
+  }
+
+  canvas{
+    width: 100%;
+  }
+  #aboutMe{
+
+    .information{
+
+        padding-top: 15rem;
+        h2{
+          margin: 1rem 0;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-size: 1.8rem;
+          font-weight: bold;
+          font-family: 'Poppins', sans-serif;
+          span{
+            color: $translucentred;
+          }
+        }
+        p{
+          font-size: 1.6rem;
+          letter-spacing: 1px;
+          line-height: 1.9;
+          padding-top: 1rem;
+          font-family: 'Poppins', sans-serif;
+        }
+        img{
+          margin-top: 1.5rem;
+          margin-right: 10rem;
+          border: 1px black solid;
+
+        }
+      .codepenLink{
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        margin-top: 1rem;
+        margin-right: 8rem;
+      }
+      .codepenLink:hover{
+          .codepenWhite{
+            opacity: 1;
+          }
+      }
+      .linkedinLink{
+        position: relative;
+        display: inline-block;
+        width: 120px;
+      }
+      .linkedinLink:hover{
+        .linkedinWhite{
+          opacity: 1;
+        }
+      }
+      .codepen{
+        background-color: white;
+        width: 120px;
+        padding: 0.9rem 1.5rem;
+        opacity: 1;
+        transition: all 1s ease 0s;
+        border-radius: 3px;
+      }
+      .codepenWhite{
+        top: 0;
+        width: 120px;
+        background-color: black;
+        padding: 0.9rem 1.5rem;
+        opacity: 0;
+        position: absolute;
+        transition: all 1s ease 0s;
+        border-radius: 3px;
+      }
+      .linkedin{
+        width: 120px;
+        height: 36.58px;
+        background-color: white;
+        padding: 0.5rem 1.5rem;
+        opacity: 1;
+        transition: all 1s ease 0s;
+        z-index: 9;
+        border-radius: 3px;
+      }
+      .linkedinWhite{
+        position: absolute;
+        top: 0;
+        background-color: black;
+        width: 120px;
+        height: 36.58px;
+        padding: 0.5rem 1.5rem;
+        opacity: 0;
+        transition: all 1s ease 0s;
+        border-radius: 3px;
+      }
+    }
+
+    #canvas{
+      width: 100%;
+      height: 150px;
+      position: absolute;
+      z-index: -999;
+      top: 5rem;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
+
+  /*skills*/
+
+  #skills{
+    text-align: center;
+    padding: 1.5rem 0 0 0;
+    margin-top: 5rem;
+    padding: 7rem 0 5rem 0;
+      h2{
+      font-size: 4.5rem;
+      font-weight: bold;
+      margin: 2rem 0 4rem 0;
+    }
+      h3{
+        margin: 1.5rem 0 1.5rem 0;
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+      .mySkills{
+        background-color: #f7f7f7;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+        box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+        border: 1px solid transparent;
+      }
+      .mySkills:hover{
+          border: 1px solid #bfbfbf;
+            transition: all 1s ease 0s;
+      }
+
+  }
+
+/*portfolio*/
+  #portfolio{
+    text-align: center;
+    margin-top: 5rem;
+    padding: 10rem 0 10rem;
+    background-color: #f7f7f7;
+    h2{
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin:0 0 4rem 0;
+    }
+      .acordion, .clock, .scrollNumbers, .rating{
+        width: 100%;
+        text-align: center;
+        border: 1px solid transparent;
+        padding: 1rem;
+        min-height: 14em;
+        position: relative;
+        border: 2px solid #bfbfbf;
+        border-bottom: 6px solid #bfbfbf;
+        box-shadow: 2px 2px 9px #bfbfbf;
+        background-color: white;
+        margin-bottom: 2rem;
+      }
+
+      .acordion{
+        background: url(jpg/acordion.jpg) no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: white;
+      }
+      .clock{
+        background: url(jpg/clock.jpg) no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .scrollNumbers{
+        background: url(jpg/scrollNumber.jpg) no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .rating{
+        background: url(jpg/rating.jpg) no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .hvr-sweep-to-top {
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: white;
+        transform: perspective(1px) translateZ(0);
+            box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition-property: color;
+        transition-duration: 0.2s;
+        transform: translateZ(0);
+}
+      .hvr-sweep-to-top:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #bfbfbf;
+        transform: scaleY(0);
+        transform-origin: 50% 100%;
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+    }
+
+      .hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
+        transform: scaleY(1);
+    }
+
+        .acordionText, .clockText, .scrollNumbersText, .ratingText{
+          opacity: 0;
+          position: absolute;
+          margin: auto;
+          top: 50%; left: 0; right: 0;
+          transition: all 0.2s;
+          transform:translateY(0px);
+        }
+
+       .acordion:hover .acordionText,.clock:hover .clockText, .scrollNumbers:hover .scrollNumbersText, .rating:hover .ratingText{
+         transition: all 0.2s;
+         transform:translateY(-10px);
+         opacity: 1;
+       }
+      a{
+        color: black;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: bold;
+        z-index: 999;
+        text-transform: uppercase;
+      }
+}
+  /*contact*/
+  #contact{
+    padding: 5rem 0 5rem 0;
+    text-align: center;
+
+    h2{
+      font-size: 4.5rem;
+      font-weight: bold;
+      margin: 4rem;
+    }
+
+      .myForm, .myContact{
+          background-color: #f7f7f7;
+          margin: 0 0 4rem 0;
+          padding: 3rem 2rem;
+          color: #333;
+          box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.1);
+          text-align: left;
+          height: 90%;
+
+      }
+      .myContact{
+        display: inline-block;
+      }
+      .textforclient{
+        width: 90%;
+        padding: 0.5rem;
+        margin: 1rem;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+      }
+      textarea{
+        height: 10rem;
+      }
+      .send{
+         @include buttonContact;
+         background-color: black;
+         color: white;
+
+      }
+      .send:hover{
+        @include buttonContactHover;
+      }
+
+    .myContact{
+      p{
+      margin-bottom: 2rem;
+      line-height: 2;
+      font-size: 1.7rem;
+    }
+      h3{
+        color: #333;
+        line-height: 0.5;
+        font-size: 1.9rem;
+        font-weight: bold;
+      }
+      h4{
+        color: #333;
+        font-weight: 500;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+      }
+      a{
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.9rem;
+        color: black;
+        margin: 2rem 10rem 0 0;
+        i{
+          margin: 1rem;
+        }
+      }
+  }
+}
+
+.OpacityVisible{
+  opacity: 1;
+  animation-duration: 1.2s;
+  animation-delay: 0.2s;
+  animation-name: animateUp;
+}
+footer{
+  color: #fff;
+    font-size: 16px;
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+@media screen and (min-width:320px) and (max-width: 440px) {
+  html {
+    font-size: 55%;
+  }
+
+  .start .job h1 {
+    font-size: 6rem;
+  }
+  nav{
+    display: none;
+  }
+  .start header.headerScroll ul{
+    display: none;
+  }
+
+
+   .menuHamburger{
+    display: inline-block;
+    float: right;
+    margin:0 4rem 1.5rem 0;
+    font-size: 3.5rem;
+    font-weight: 400;
+    z-index: 999;
+
+  }
+  .start{
+    .navSmallScreen{
+      display: none;
+      z-index: 99;
+      position: fixed;
+      padding: 4rem 0 0 1rem;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+      width: 100%;
+      margin-top: 10rem;
+      ul{
+        display: block;
+        text-align: center;
+        z-index: 999;
+      }
+      li{
+        display: inline-block;
+        width: 100%;
+        padding: 1.3rem;
+        a{
+          width: 100%;
+          font-weight: bold;
+          font-size: 1.8rem;
+          color: black;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+
+    header{
+      padding-top: 5rem;
+      position: relative;
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+    }
+
+  }
+
+  #contact .contactMe .myForm, #contact .myContact{
+
+    margin: 2rem 0 0 0;
+  }
+  #contact .myContact a{
+    margin: 0;
+  }
+  .start header img{
+    margin: 0;
+    left: 3rem;
+    bottom: 2.3rem;
+  }
+  #portfolio .myPortfolio .acordion, #portfolio .myPortfolio .clock, #portfolio .myPortfolio  .scrollNumbers,  #portfolio .myPortfolio  .rating{
+      width: 60%;
+      background-color: white;
+      }
+      .start header.headerScroll{
+            padding-top: 5rem;}
+      .start .job {
+              margin-left: 5rem;}
+
+
+      footer{
+        font-size: 1.4rem;
+      }
+      #contact .contactMe .send {
+        padding: 0;
+      }
+      #contact .myContact p{
+        font-size: 1.7rem;
+      }
+      #contact .myContact h4{
+        font-size: 1.7rem;
+        padding-bottom: 1rem;
+      }
+
+
+
+}
+
+@media screen and (min-width: 441px) and (max-width: 780px) {
+  html {
+    font-size: 50%;
+  }
+  nav{
+    display: none;
+  }
+  .start header.headerScroll ul{
+    display: none;
+  }
+
+  .menuHamburger{
+   display: inline-block;
+   float: right;
+   margin:0 4rem 1.5rem 0;
+   font-size: 3.5rem;
+   font-weight: 400;
+   z-index: 999;
+ }
+ .start{
+   .navSmallScreen{
+     display: none;
+     padding: 4rem 0 0 1rem;
+     z-index: 99;
+     position: fixed;
+     top: 0;
+     background: rgba(255, 255, 255, 0.9);
+     width: 100%;
+     margin-top: 10rem;
+     ul{
+       display: block;
+       text-align: center;
+       z-index: 999;
+     }
+     li{
+       display: inline-block;
+       width: 100%;
+       padding: 1.3rem;
+       a{
+         width: 100%;
+         font-weight: bold;
+         font-size: 1.8rem;
+         color: black;
+         text-decoration: none;
+         text-transform: uppercase;
+       }
+     }
+   }
+
+   header{
+     padding-top: 5rem;
+     position: relative;
+     position: fixed;
+     top: 0;
+     z-index: 999;
+   }
+
+ }
+
+  #contact .contactMe .myForm, #contact .contactMe .myContact{
+    margin: 4rem 0 0 0;
+  }
+  #portfolio .myPortfolio .acordion, #portfolio .myPortfolio .clock, #portfolio .myPortfolio  .scrollNumbers,  #portfolio .myPortfolio  .rating{
+
+      background-color: white;
+      }
+      .start header.headerScroll{
+            padding-top: 5rem;}
+
+
+      .start .job {
+      margin-left: 7rem;}
+
+      .start header img{
+        margin: 0;
+        left: 3rem;
+        bottom: 2.3rem;
+      }
+      #contact .myContact p{
+        font-size: 1.7rem;
+      }
+      #contact .myContact h4{
+        font-size: 1.7rem;
+        padding-bottom: 1rem;
+      }
+}
+
+@media screen and (min-width: 780px) and (max-width: 1045px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container{
+
+    .job{
+      margin-left: 3rem;
+      h1{
+        margin-top: 2rem;
+
+      }
+    }
+    header{
+      padding-top: 5rem;
+      position: relative;
+    }
+
+  }
+
+  #contact .contactMe .myForm, #contact .contactMe .myContact{
+    margin: 4rem 0 0 0;
+  }
+  #portfolio .myPortfolio .acordion, #portfolio .myPortfolio .clock, #portfolio .myPortfolio  .scrollNumbers,  #portfolio .myPortfolio  .rating{
+
+      background-color: white;
+      }
+
+
+      .start .job {
+      margin-left: 9rem;}
+      #contact .myContact p{
+        font-size: 1.7rem;
+      }
+      #contact .myContact h4{
+        font-size: 1.7rem;
+        padding-bottom: 1rem;
+      }
+
+      .start header img{
+        margin: 0;
+        left: 3rem;
+        bottom: 1.3rem;
+      }
+}
