@@ -236,9 +236,7 @@ $translucentred: #f13e65;
         }
         img{
           margin-top: 1.5rem;
-          margin-right: 10rem;
           border: 1px black solid;
-
         }
       .codepenLink{
         position: relative;
@@ -361,7 +359,7 @@ $translucentred: #f13e65;
         text-align: center;
         border: 1px solid transparent;
         padding: 1rem;
-        min-height: 14em;
+        min-height: 16em;
         position: relative;
         border: 2px solid #bfbfbf;
         border-bottom: 6px solid #bfbfbf;
@@ -549,8 +547,13 @@ footer{
   .start header.headerScroll ul{
     display: none;
   }
+  #aboutMe .information{
+    padding-top: 13rem;
+  }
 
-
+  #aboutMe #canvas{
+    top: 2rem;
+  }
    .menuHamburger{
     display: inline-block;
     float: right;
@@ -650,6 +653,9 @@ footer{
   }
   .start header.headerScroll ul{
     display: none;
+  }
+  #aboutMe #canvas{
+    top: 2rem;
   }
 
   .menuHamburger{

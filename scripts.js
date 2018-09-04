@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
   (function(){
-    var word = "Cześć, mam na imię Kinga  i jestem Front end Developerem.";
+    var word = "Cześć, mam na imię Kinga  i jestem Front-end Developerem.";
     word = word.split("");
     var wordLength = word.length;
     var i = 0;
