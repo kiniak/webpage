@@ -40,7 +40,7 @@ body {
   background-size: cover;
   z-index: 1;
   position: relative;
-  min-height: 100vh; }
+  height: 120rem; }
 
 .start::after {
   position: absolute;
@@ -169,7 +169,7 @@ canvas {
 #aboutMe .information {
   padding-top: 15rem; }
   #aboutMe .information h2 {
-    margin: 1rem 0;
+    margin: 2.5rem 0;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 1.8rem;
